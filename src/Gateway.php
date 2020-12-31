@@ -20,6 +20,7 @@ class Gateway extends AbstractGateway
             'shortcode' => '',
             'consumer_key' => '',
             'consumer_secret' => '',
+            'passkey' => '',
 			'token',
 			'callbackUrl' => '',
 			// 'resultUrl' => '',
