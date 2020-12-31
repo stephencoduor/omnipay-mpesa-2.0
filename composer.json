@@ -1,0 +1,33 @@
+{
+	"name": "stephencoduor/omnipay-mpesa",
+	"type": "Library",
+	"description": "Mpesa gateway for Omnipay-v2.5.2",
+	"keywords": [
+		"Omnipay-v2.5.2",
+		"Mpesa",
+		"Mpesa Stk"
+	],
+	"homepage": "https://github.com/stephencoduor/omnipay-mpesa-v2.5.2",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Stephen Oduor",
+			"email": "stephencoduor@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Omnipay\\Mpesa\\": "src"
+		}
+	},
+	"require": {
+		"php": "^5.6|^7.1",
+		"omnipay/common": "v2.5.2"
+	},
+	"require-dev": {
+		"omnipay/tests": "~2.0"
+	},
+
+	"minimum-stability": "dev",
+	"prefer-stable": true
+}
