@@ -25,9 +25,9 @@ Just want to see some code?
       $gateway->setTestMode('sandbox'); 
 
           $purchase = $gateway->purchase(array(
-             'amount' => '100',
+             'amount' => '5',
              'phone_number' => '254710431009',
-             'account' => 'apitest',
+             'account' => 'Myaccount',
              'description' => 'This is a purchase',
              'callbackUrl' => 'https://domain.com/callback_url.php',
            ));
@@ -73,7 +73,7 @@ PSRs you support to avoid any confusion with users and contributors.
 
 ## Install
 
-Instal the gateway using require. Require the `league/omnipay` base package and this gateway.
+Install the gateway using require. Require the `omnipay/common: v2.0` base package and this gateway.
 
 ``` bash
 $ composer require stephencoduor/omnipay-mpesa
