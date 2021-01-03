@@ -73,7 +73,7 @@ PSRs you support to avoid any confusion with users and contributors.
 
 ## Install
 
-Install the gateway using require. Require the `omnipay/common: v2.0` base package and this gateway.
+ `omnipay/common: v2.0` is a dependecy and is required in the composer file already so just install using below command.
 
 ``` bash
 $ composer require stephencoduor/omnipay-mpesa
