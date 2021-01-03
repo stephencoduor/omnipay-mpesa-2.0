@@ -1,7 +1,7 @@
 {
 	"name": "stephencoduor/omnipay-mpesa",
 	"type": "Library",
-	"description": "Mpesa gateway for Omnipay-v2.5.2",
+	"description": "Mpesa gateway for Omnipay-v2.0",
 	"keywords": [
 		"Omnipay-v2.5.2",
 		"Mpesa",
