@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab33dc34-064d-4425-9306-5ffcd638eb7a" name="Default Changelist" comment="" />
+    <list default="true" id="ab33dc34-064d-4425-9306-5ffcd638eb7a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gateway.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gateway.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Message/AbstractRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Message/AbstractRequest.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1mO6N0oj66HEgD9zgmeX67CE8Ls" />
   <component name="ProjectViewState">
@@ -20,6 +27,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../omnipay-mtn-v2.5" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -31,6 +39,12 @@
       <option name="presentableId" value="Default" />
       <updated>1609352247361</updated>
       <workItem from="1609352250123" duration="828000" />
+      <workItem from="1609387903794" duration="1687000" />
+      <workItem from="1609406792354" duration="586000" />
+      <workItem from="1609435463047" duration="580000" />
+      <workItem from="1609485733494" duration="1266000" />
+      <workItem from="1609565143463" duration="4558000" />
+      <workItem from="1609653136058" duration="4186000" />
     </task>
     <servers />
   </component>

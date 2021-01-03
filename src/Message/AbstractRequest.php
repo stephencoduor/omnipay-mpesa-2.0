@@ -9,7 +9,7 @@ use Omnipay\Common\Message\AbstractRequest as BaseAbstractRequest;
  *
  */
 abstract class AbstractRequest extends BaseAbstractRequest
-{    
+{
     const STKPUSH  = 'mpesa/stkpush/v1/processrequest';
     /**
      * Live Endpoint URL
@@ -20,7 +20,7 @@ abstract class AbstractRequest extends BaseAbstractRequest
      * @var string URL
      */
     protected $liveEndpoint = 'https://api.safaricom.co.ke/';
-    
+
     /**
      * Sandbox Endpoint URL
      *
@@ -115,6 +115,8 @@ abstract class AbstractRequest extends BaseAbstractRequest
         return $this->getTestMode() ? $this->testEndpoint : $this->liveEndpoint;
     }
 
+
+
     public function sendData($data)
     {
         // Guzzle HTTP Client createRequest does funny things when a GET request
@@ -133,6 +135,12 @@ abstract class AbstractRequest extends BaseAbstractRequest
         // echo "Data == " . json_encode($data) . "\n";
 
         try {
+
+/*          $httpRequest = $this->httpClient->post($this->getEndpoint(), null, http_build_query($data, '', '&'));
+            $httpRequest->getCurlOptions()->set(CURLOPT_SSLVERSION, 6); // CURL_SSLVERSION_TLSv1_2 for libcurl < 7.35
+            $httpResponse = $httpRequest->send();
+            return $this->createResponse($httpResponse->getBody());
+    */
             $httpResponse = $this->httpClient->{strtolower($this->getHttpMethod())}(
                 // $this->getHttpMethod(),
                 $this->getEndpoint(),
@@ -146,7 +154,10 @@ abstract class AbstractRequest extends BaseAbstractRequest
             // Empty response body should be parsed also as and empty array
             $body = (string) $httpResponse->getBody();
             $jsonToArrayResponse = !empty($body) ? json_decode($body, true) : array();
+
             return $this->response = $this->createResponse($jsonToArrayResponse, $httpResponse->getStatusCode());
+            //return $this->createResponse($httpResponse->getBody());
+
         } catch (\Exception $e) {
             throw new InvalidResponseException(
                 'Error communicating with payment gateway: ' . $e->getMessage(),
@@ -177,5 +188,5 @@ abstract class AbstractRequest extends BaseAbstractRequest
     {
         return $this->response = new Response($this, $data, $statusCode);
     }
-    
+
 }

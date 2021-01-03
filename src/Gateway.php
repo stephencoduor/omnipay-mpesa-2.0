@@ -22,11 +22,12 @@ class Gateway extends AbstractGateway
             'consumer_secret' => '',
 			'token',
 			'callbackUrl' => '',
+            'passkey' => '',
 			// 'resultUrl' => '',
             'testMode' => false,
         );
 	}
-	
+
 	public function getCallbackUrl()
     {
         return $this->getParameter('callbackUrl');
@@ -36,7 +37,7 @@ class Gateway extends AbstractGateway
     {
         return $this->setParameter('callbackUrl', $value);
     }
-    
+
     public function getShortCode()
     {
         return $this->getParameter('shortcode');
@@ -66,7 +67,7 @@ class Gateway extends AbstractGateway
     {
         return $this->setParameter('consumer_secret', $value);
     }
-    
+
     public function getPassKey()
     {
         return $this->getParameter('pass_key');
@@ -186,7 +187,7 @@ class Gateway extends AbstractGateway
      * Create a purchase request.
      *
      * PayPal provides various payment related operations using the /payment
-     * resource and related sub-resources. 
+     * resource and related sub-resources.
      *
      * @link https://developer.safaricom.co.ke/get-started
      * @param array $parameters
