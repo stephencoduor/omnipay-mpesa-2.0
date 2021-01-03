@@ -3,11 +3,11 @@
 	"type": "Library",
 	"description": "Mpesa gateway for Omnipay-v2.0",
 	"keywords": [
-		"Omnipay-v2.5.2",
+		"Omnipay-v2.0.0",
 		"Mpesa",
 		"Mpesa Stk"
 	],
-	"homepage": "https://github.com/stephencoduor/omnipay-mpesa-v2.5",
+	"homepage": "https://github.com/stephencoduor/omnipay-mpesa-v2.0",
 	"license": "MIT",
 	"authors": [
 		{
