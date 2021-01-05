@@ -115,9 +115,7 @@ abstract class AbstractRequest extends BaseAbstractRequest
         return $this->getTestMode() ? $this->testEndpoint : $this->liveEndpoint;
     }
 
-
-
-    public function sendData($data)
+        public function sendData($data)
     {
         // Guzzle HTTP Client createRequest does funny things when a GET request
         // has attached data, so don't send the data if the method is GET.
@@ -135,14 +133,8 @@ abstract class AbstractRequest extends BaseAbstractRequest
         // echo "Data == " . json_encode($data) . "\n";
 
         try {
-
-/*          $httpRequest = $this->httpClient->post($this->getEndpoint(), null, http_build_query($data, '', '&'));
-            $httpRequest->getCurlOptions()->set(CURLOPT_SSLVERSION, 6); // CURL_SSLVERSION_TLSv1_2 for libcurl < 7.35
-            $httpResponse = $httpRequest->send();
-            return $this->createResponse($httpResponse->getBody());
-    */
-            $httpResponse = $this->httpClient->{strtolower($this->getHttpMethod())}(
-                // $this->getHttpMethod(),
+            $httpResponse = $this->httpClient->request(
+                $this->getHttpMethod(),
                 $this->getEndpoint(),
                 array(
                     'Accept' => 'application/json',
@@ -154,17 +146,15 @@ abstract class AbstractRequest extends BaseAbstractRequest
             // Empty response body should be parsed also as and empty array
             $body = (string) $httpResponse->getBody();
             $jsonToArrayResponse = !empty($body) ? json_decode($body, true) : array();
-
             return $this->response = $this->createResponse($jsonToArrayResponse, $httpResponse->getStatusCode());
-            //return $this->createResponse($httpResponse->getBody());
-
         } catch (\Exception $e) {
             throw new InvalidResponseException(
                 'Error communicating with payment gateway: ' . $e->getMessage(),
                 $e->getCode()
             );
         }
-    }
+    }  
+    
 
     /**
      * Returns object JSON representation required by PayPal.
